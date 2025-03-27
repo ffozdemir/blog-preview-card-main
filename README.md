@@ -36,8 +36,8 @@ Mobile view
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/yourusername/blog-preview-card)
-- Live Site URL: [Live Demo](https://yourusername.github.io/blog-preview-card)
+- Solution URL: [GitHub Repository](https://github.com/yourusername/blog-preview-card-main)
+- Live Site URL: [Live Demo](https://bejewelled-daifuku-219c9b.netlify.app)
 
 ## My process
 
