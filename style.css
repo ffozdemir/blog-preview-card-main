@@ -53,8 +53,9 @@ body {
   color: var(--gray-500);
 }
 
-.card-container h2:active{
-   color: var(--yellow);
+.card-container h2:active {
+  cursor: pointer;
+  color: var(--yellow);
 }
 
 .card-container > img {
