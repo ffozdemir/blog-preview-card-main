@@ -5,14 +5,18 @@
   --white: hsl(0, 0%, 100%);
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
-  --font-size: 16px;
+  --font-size: 1rem;
   --font-family: "Figtree", sans-serif;
   --font-weight-500: 500;
   --font-weight-800: 800;
   --border-radius: 10px;
+  --box-shadow: 8px 8px 1px 2px var(--gray-950);
+  --padding-card: 20px;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,53 +24,62 @@
 
 body {
   background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  padding: 16px;
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   gap: 18px;
-  width: 320px;
-  margin: 45px auto;
-  padding: 20px;
+  max-width: 22rem;
+  padding: var(--padding-card);
   background-color: var(--white);
   border-radius: var(--border-radius);
   border: 1px solid var(--gray-500);
-  box-shadow: 8px 8px 1px 2px var(--gray-950);
+  box-shadow: var(--box-shadow);
   line-height: 1.5;
   color: var(--gray-950);
   font-size: var(--font-size);
-  font-family: var(--font-family);
 }
 
-.card-container > img + p {
+.card-subject {
   font-weight: var(--font-weight-800);
   background-color: var(--yellow);
   padding: 5px 10px;
   border-radius: var(--border-radius);
 }
 
-.card-container h2 + p {
+.card-text {
   font-weight: var(--font-weight-500);
   color: var(--gray-500);
 }
 
-.card-container h2:active {
+.card-container h2 a {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-800);
+  color: var(--gray-950);
+  text-decoration: none;
+}
+
+.card-container a:active {
   cursor: pointer;
   color: var(--yellow);
 }
 
-.card-container > img {
-  width: 100%;
-  height: auto;
+.card-image {
+  max-width: 100%;
   border-radius: var(--border-radius);
+  display: block;
 }
 
 .card-avatar {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 15px;
   margin-top: 10px;
@@ -77,10 +90,4 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-}
-
-@media screen and (min-width: 768px) {
-  .card-container {
-    width: 380px;
-  }
 }
